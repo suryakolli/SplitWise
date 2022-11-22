@@ -44,6 +44,6 @@ public class RegisterUserCommand implements Command{
         requestDto.setPassword(password);
 
         RegisterUserResponseDto responseDto = userController.registerUser(requestDto);
-        System.out.println(responseDto.getUser());
+        System.out.println(responseDto.getUser().toString());
     }
 }

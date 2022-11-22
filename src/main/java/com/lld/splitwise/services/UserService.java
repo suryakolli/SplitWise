@@ -21,4 +21,10 @@ public class UserService {
         user.setPhoneNumber(phoneNumber);
         return userRepository.save(user);
     }
+
+    public User updateUser(Long id, String newPassword) {
+        User user = userRepository.findUserById(id);
+        user.setPassword(newPassword);
+        return userRepository.save(user);
+    }
 }

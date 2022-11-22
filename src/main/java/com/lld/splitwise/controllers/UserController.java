@@ -2,6 +2,8 @@ package com.lld.splitwise.controllers;
 
 import com.lld.splitwise.dtos.RegisterUserRequestDto;
 import com.lld.splitwise.dtos.RegisterUserResponseDto;
+import com.lld.splitwise.dtos.UpdateProfileRequestDto;
+import com.lld.splitwise.dtos.UpdateProfileResponseDto;
 import com.lld.splitwise.models.User;
 import com.lld.splitwise.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +27,12 @@ public class UserController {
         RegisterUserResponseDto registerUserResponseDto = new RegisterUserResponseDto();
         registerUserResponseDto.setUser(user);
         return registerUserResponseDto;
+    }
+
+    public UpdateProfileResponseDto updateProfile(UpdateProfileRequestDto requestDto) {
+        User user = userService.updateUser(requestDto.getId(), requestDto.getNewPassword());
+        UpdateProfileResponseDto responseDto = new UpdateProfileResponseDto();
+        responseDto.setUser(user);
+        return responseDto;
     }
 }

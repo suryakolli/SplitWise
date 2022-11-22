@@ -14,4 +14,13 @@ public class User extends BaseModel {
     private String username;
     private String password;
     private String phoneNumber;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
 }
