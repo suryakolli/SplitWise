@@ -30,7 +30,7 @@ public class SplitWiseApplication implements CommandLineRunner {
         commandRegistry.registerCommand(registerUserCommand);
         commandRegistry.registerCommand(updateProfileCommand);
 
-        String commandLine = "bc";
+        String commandLine = "register surya Surya@123 4708381574";
 
         commandRegistry.executeCommand(commandLine);
     }

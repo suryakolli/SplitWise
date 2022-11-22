@@ -15,7 +15,7 @@ public class UpdateProfileCommand implements Command{
             return false;
         }
 
-        if(commandTokens.get(1).equals(CommandKeywords.UPDATE_PROFILE_COMMAND)) return false;
+        if(!commandTokens.get(1).equals(CommandKeywords.UPDATE_PROFILE_COMMAND)) return false;
 
         return true;
     }

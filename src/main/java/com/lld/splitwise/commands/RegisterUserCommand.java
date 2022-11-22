@@ -27,7 +27,7 @@ public class RegisterUserCommand implements Command{
             return false;
         }
 
-        if(commandTokens.get(0).equals(CommandKeywords.REGISTER_USER_COMMAND)) return false;
+        if(!commandTokens.get(0).equals(CommandKeywords.REGISTER_USER_COMMAND)) return false;
 
         return true;
     }
